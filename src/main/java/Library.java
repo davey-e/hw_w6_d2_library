@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Library {
     private String name;
@@ -43,5 +44,20 @@ public class Library {
 //        why doesn't this work?:
 //        return this.books.remove(book);
 //        When i tried this it complained about incompatible types. Required: Book, Found: Boolean
+    }
+
+    public HashMap<String,Integer> generateGenreCountHashMap() {
+        int bookCount = getBookCount();
+        HashMap<String, Integer> genreCountHashMap = new HashMap<>();
+        for(int i = 0; i < bookCount; i++){
+            String genre = this.books.get(i).getGenre();
+            if(!genreCountHashMap.containsKey(genre)){
+                genreCountHashMap.put(genre, 1);
+            } else {
+                int currentGenreCount = genreCountHashMap.get(genre);
+                genreCountHashMap.replace(genre, currentGenreCount +1);
+            }
+        }
+        return genreCountHashMap;
     }
 }
