@@ -23,8 +23,17 @@ public class Library {
         return this.books.size();
     }
 
-    public void addBook(Book book) {
-        this.books.add(book);
+    public boolean isLibraryFull(){
+        if(getBookCount() < this.capacity) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
+    public void addBook(Book book) {
+        if (!isLibraryFull()) {
+            this.books.add(book);
+        }
+    }
 }

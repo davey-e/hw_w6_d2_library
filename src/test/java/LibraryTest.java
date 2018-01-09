@@ -37,4 +37,11 @@ public class LibraryTest {
         assertEquals(1, library.getBookCount());
     }
 
+    @Test
+    public void wontAddBookWhenLibraryIsFull(){
+        library.addBook(book1);
+        library.addBook(book2);
+        assertEquals(1, library.getBookCount());
+    }
+
 }
