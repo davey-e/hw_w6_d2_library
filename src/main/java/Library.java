@@ -37,7 +37,11 @@ public class Library {
         }
     }
 
-    public void removeBook(Book book) {
-        this.books.remove(book);
+    public Book removeBook(Book book) {
+        int bookIndex = this.books.indexOf(book);
+        return this.books.remove(bookIndex);
+//        why doesn't this work?:
+//        return this.books.remove(book);
+//        When i tried this it complained about incompatible types. Required: Book, Found: Boolean
     }
 }
