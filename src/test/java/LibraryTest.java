@@ -12,8 +12,8 @@ public class LibraryTest {
     @Before
     public void before(){
         library = new Library("Ellon Library");
-        book1 = new Book();
-        book2 = new Book();
+        book1 = new Book("Andy Griffiths", "The 13-Storey Treehouse");
+        book2 = new Book("Andy Griftiths", "The 26-Storey Treehouse");
     }
 
     @Test
