@@ -9,7 +9,7 @@ public class BookTest {
 
     @Before
     public void before(){
-        book1 = new Book("Andy Griffiths", "The 13-Storey Treehouse");
+        book1 = new Book("Andy Griffiths", "The 13-Storey Treehouse", "Children's fiction");
     }
 
     @Test
@@ -20,5 +20,10 @@ public class BookTest {
     @Test
     public void bookHasTitle(){
         assertEquals("The 13-Storey Treehouse", book1.getTitle());
+    }
+
+    @Test
+    public void bookHasGenre(){
+        assertEquals("Children's fiction", book1.getGenre());
     }
 }

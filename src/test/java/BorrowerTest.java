@@ -12,7 +12,7 @@ public class BorrowerTest {
     @Before
     public void before(){
         library = new Library("Ellon Library", 1);
-        book1 = new Book("Andy Griffiths", "The 13-Storey Treehoouse");
+        book1 = new Book("Andy Griffiths", "The 13-Storey Treehoouse", "Children's fiction");
         borrower = new Borrower("Michael Davidson", 6);
     }
 
